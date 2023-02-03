@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, BackHandler, Dimensions } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height'; // status bar 높이
 
-const WEBVIEW_URL = "https://kiin.odoc-api.com/";
+const WEBVIEW_URL = "/--url--/";
 const { width: SCREEN_WIDTH } = Dimensions.get("window"); // 화면 크기 알아내도록, width를 screen_width로 사용
 
 export default function App() {
@@ -38,7 +38,7 @@ export default function App() {
 
   const onPressHardwareBackButton = () => {
     if (!webViewRef.current) return;
-    if (currentUrl === 'https://kiin.odoc-api.com/' || currentUrl === 'https://kiin.odoc-api.com/login' || currentUrl === 'https://kiin.odoc-api.com/main') {
+    if (currentUrl === '/--url--/' || currentUrl === '/--url--/login' || currentUrl === '/--url--/main') {
       BackHandler.exitApp(); // app 종료
       return;
     }
